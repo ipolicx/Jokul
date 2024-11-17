@@ -3,7 +3,7 @@
 
 ### 项目简介 / Project Introduction
 
-Jokul 是一个每小时更换桌面壁纸的应用程序。
+Jokul 是一个配合Windows任务计划，整点换壁纸每小时更换桌面壁纸的应用程序。
 
 Jokul is a wallpaper application that changes your desktop background hourly.
 
@@ -33,7 +33,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyinstaller
 要将 `jokul.py` 打包成一个单独的可执行文件并包含 `Images` 文件夹中的资源，运行以下命令：/ To package `jokul.py` into a single executable file and include the resources in the `Images` folder, run the following command:
 
 ```sh
-pyinstaller --onefile --noconsole --add-data "Images;Images" jokul.py
+pyinstaller --onefile --add-data "Images;Images" --noconsole jokul.py
 ```
 
 这将在 `dist` 目录中生成一个单个的 `.exe` 文件。 
